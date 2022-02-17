@@ -1,0 +1,7 @@
+{
+  "name": "iNoVo-web",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

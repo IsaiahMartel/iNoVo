@@ -1,0 +1,59 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>contact</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div id='contact'>
+        <h1>Quienes somos</h1>
+        <h2>iNoVo, la tienda de telefonía móvil número 1 en Canarias
+        </h2>
+        <hr id='separator'>
+        <h3>Dirección: Las Palmas de Gran Canaria, Las Palmas, C/ Industrial José Sánchez Peñate
+        </h3>
+        <hr id='separator'>
+        <h3>Teléfono de contacto: 634 21 23 28</h3>
+        <hr id='separator'>
+        <h3>Correo electrónico: inovo-tienda@gmail.com</h3>
+        <hr id='separator'>
+        <hr id='separator-littler'>
+        <form action=""></form>
+
+    </div>
+
+    <div id='information'>
+        <ion-row>
+            <ion-icon src="assets/nabvar-icons/mobile.svg "></ion-icon>
+            <h1>Ofertas mensuales</h1>
+        </ion-row>
+
+
+        <h2>¡Compramos tú móvil! Si querías cambiar de móvil, tienes alguno sin usar o se te ha estropeado algún componente, ¡te puedes deshacer de él y ganar dinero!* - En el caso de que quieras comprarte otro móvil, se te aplicará un descuento equivalente
+            al precio que se negocie en la tienda más un 10%. </h2>
+        <h3>- En el caso de móviles con componentes estropeados el vendedor evaluará si es posible comprarlo. </h3>
+        <h4>*se debe negociar el precio en la tienda</h4>
+    </div>
+
+    <div id='employees-information'>
+        <ion-row>
+            <ion-icon src="assets/nabvar-icons/mobile.svg "></ion-icon>
+            <h1>Nuestors empleados</h1>
+        </ion-row>
+
+
+
+        <ng-container *ngFor="let employees of employeesArray ">
+            <ion-img id='employee-image'></ion-img>
+            <h2 id='employee-name'>
+            </h2>
+            <h3 id='employee-description'>
+            </h3>
+            <h3 id='employee-mobile'>
+            </h3>
+            <h3 id='employee-email'>
+            </h3>
+        </ng-container>
+    </div>
+
+</ion-content>
