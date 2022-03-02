@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans&display=swap');
+ion-content {
+
+
+
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(219, 243, 252, 1) 100%);
+}
+
+ion-header {
+    text-align: center;
+}
+
+ion-toolbar {
+    margin-top: 1.5%;
+    vertical-align: middle;
+}
+
+.navbar-icon {
+    font-size: 1.1em;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 7px;
+    margin-top: 5px;
+}
+
+.navbar-icon-outside {
+    font-size: 1.7em;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+
+#purchase-icon {
+    font-size: 1.8em;
+}
+
+#device-icon {
+    margin-right: 0px;
+    font-size: 2em;
+}
+
+.navbar-text {
+    font-size: 1.6em;
+    display: inline-block;
+    vertical-align: middle;
+    font-family: 'Spline Sans', sans-serif;
+}
+
+.navbar-categories {
+    border-right: 1px solid black;
+    display: inline-block;
+}
+
+#bar {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 40px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    margin-left: 3%;
+    margin-right: 3%;
+    background-color: #F5F5F5;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.section {
+    border-right: 1px solid black;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+ion-searchbar {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 30%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.item-highlight{
+    width: 50%;
+}

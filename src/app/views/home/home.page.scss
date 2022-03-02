@@ -11,6 +11,7 @@
         102);
         border-style: solid;
         border-width: 0px 1px 1px 1px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(219, 243, 252, 1) 100%);
     }
     
     ion-header {
@@ -113,22 +114,20 @@
     
     #ion-card-title {
         float: left;
+        position: absolute;
         color: black;
     }
     
-    #product-image {
-        width: 60%;
-        height: auto;
-    }
+   
     
     #content {
         margin-top: 2%;
-        margin-left: 2%;
-        margin-right: 2%;
+        margin-left: 10%;
+        margin-right: 10%;
     }
     
     #content-without-margins {
-        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(219, 243, 252, 1) 100%);
+        // background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(219, 243, 252, 1) 100%);
     }
     
     #big-slider {
@@ -137,17 +136,23 @@
         width: 44%;
         margin-left: 3%;
         margin-top: 2%;
+        #product-image {
+            width: 60%;
+            height: auto;
+        }
     }
     
     #one-little-slider {
         background-color: #3619191a;
-        height: 40%;
+        height: 150px;
+     
     }
     
     #other-little-slider {
         background-color: #3619191a;
-        height: 40%;
+        height: 150px;
         margin-top: 13%;
+      
     }
     
     .little-sliders {

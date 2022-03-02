@@ -8,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-for-product.component.scss'],
 })
 export class SearchForProductComponent implements OnInit {
-
+searchByName="";
   constructor() { }
 
   ngOnInit() {}
+
+  search(event){
+    this.searchByName = event.detail.value;
+  }
 
 }

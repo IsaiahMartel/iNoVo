@@ -1,45 +1,130 @@
-<ion-header>
-    <ion-toolbar>
-        <ion-title>contact</ion-title>
+<ion-header class="ion-no-border">
+    <ion-toolbar id="navbar">
+
+        <h2 class="navbar-text" id='name-site' routerLink="/home">iNoVo</h2>
+
+
+        <div id='bar'>
+            <div class='section' routerLink="/mobiles">
+                <ion-icon class="navbar-icon" src="assets/nabvar-icons/mobile.svg ">
+                </ion-icon>
+                <h2 class="navbar-text">Moviles</h2>
+            </div>
+
+            <div class='section' routerLink="/tablets">
+                <ion-icon class="navbar-icon" src="assets/nabvar-icons/tablet.svg "></ion-icon>
+                <h2 class="navbar-text">Tablets</h2>
+            </div>
+            <div class='section' routerLink="/devices">
+                <ion-icon class="navbar-icon" id='device-icon' src="assets/nabvar-icons/devices.svg "></ion-icon>
+                <h2 class="navbar-text">Accesorios</h2>
+            </div>
+            <div class='section' routerLink="/others">
+                <ion-icon class="navbar-icon" src="assets/nabvar-icons/others.svg "></ion-icon>
+                <h2 class="navbar-text">Otros</h2>
+
+            </div>
+            <ion-searchbar class='search-products' placeholder='Busqueda' [(ngModel)]='searchTerm'
+                showCancelButton='focus' animated></ion-searchbar>
+        </div>
+
+
+        <ion-icon class="navbar-icon-outside" src="assets/nabvar-icons/contact.svg " routerLink="/contact">
+        </ion-icon>
+        <ion-icon class="navbar-icon-outside" src="assets/nabvar-icons/login.svg " routerLink="/login"></ion-icon>
+        <ion-icon class="navbar-icon-outside" id='purchase-icon' src="assets/nabvar-icons/purchase.svg"
+            routerLink="/purchase"></ion-icon>
+
+
     </ion-toolbar>
 </ion-header>
 
 <ion-content>
     <div id='contact'>
-        <h1>Quienes somos</h1>
+        <h1><b><u>Quienes somos</u></b></h1>
         <h2>iNoVo, la tienda de telefonía móvil número 1 en Canarias
         </h2>
         <hr id='separator'>
-        <h3>Dirección: Las Palmas de Gran Canaria, Las Palmas, C/ Industrial José Sánchez Peñate
+        <h3><b>Dirección:</b> Las Palmas de Gran Canaria, Las Palmas, C/ Industrial José Sánchez Peñate
         </h3>
         <hr id='separator'>
-        <h3>Teléfono de contacto: 634 21 23 28</h3>
+        <h3><b>Teléfono de contacto:</b> 634 21 23 28</h3>
         <hr id='separator'>
-        <h3>Correo electrónico: inovo-tienda@gmail.com</h3>
+        <h3><b>Correo electrónico:</b> inovo-tienda@gmail.com</h3>
         <hr id='separator'>
         <hr id='separator-littler'>
-        <form action=""></form>
+        <div id="square">
+            <h1>Necesitas ayuda?</h1>
+            <h3>Contactanos</h3>
+            <form [formGroup]="contactForm" (ngSubmit)="contact()" novalidate>
 
+                <ion-item class="fields">
+                    <ion-label position="floating" for="project_id">
+                        Nombre
+                    </ion-label>
+                    <ion-input id="project-id" type="text" formControlName="name" required></ion-input>
+                </ion-item>
+
+
+                <ion-item class="fields" >
+                    <ion-label position="floating" for="project_id">
+                        Email
+                    </ion-label>
+                    <ion-input name="email" type="email" formControlName="email" required></ion-input>
+                    <span slot="error"
+                        *ngIf="contactForm.controls['email'].errors?.required && contactForm.controls['email'].touched">Rellene
+                        el email</span>
+                    <span slot="error"
+                        *ngIf="contactForm.controls['email'].errors?.pattern && contactForm.controls['email'].touched">El
+                        email no es válido.</span>
+                </ion-item>
+             
+                <ion-item class="fields">
+                    <ion-label position="floating" for="project_id">
+                        Preguntas
+                    </ion-label>
+                    <ion-input name="questions" type="questions" formControlName="questions" required></ion-input>
+                    <span slot="error"
+                        *ngIf="contactForm.controls['questions'].errors?.required && contactForm.controls['questions'].touched">Pregunta requerida</span>
+
+                    <!-- <span slot="error" *ngIf="contactForm.controls['questions'].errors?.pattern && contactForm.controls['questions'].touched" >La contraseña no es válida.</span> -->
+                </ion-item>
+                <hr id='separator-form'>
+                <button id="contact-button" type="submit" class="button" type="submit">CONTACTANOS</button>
+                <h3 id="fill-text">Rellena el formulario y te enviaremos un correo!</h3>
+                
+               
+
+
+            </form>
+        </div>
     </div>
 
     <div id='information'>
-        <ion-row>
-            <ion-icon src="assets/nabvar-icons/mobile.svg "></ion-icon>
-            <h1>Ofertas mensuales</h1>
-        </ion-row>
+        <ion-img id="monthly-offers-icon" src="assets/contact-page/hands-shake.svg"></ion-img>
+        <h1 id="monthly-offers-text">Ofertas mensuales</h1>
 
 
-        <h2>¡Compramos tú móvil! Si querías cambiar de móvil, tienes alguno sin usar o se te ha estropeado algún componente, ¡te puedes deshacer de él y ganar dinero!* - En el caso de que quieras comprarte otro móvil, se te aplicará un descuento equivalente
-            al precio que se negocie en la tienda más un 10%. </h2>
-        <h3>- En el caso de móviles con componentes estropeados el vendedor evaluará si es posible comprarlo. </h3>
-        <h4>*se debe negociar el precio en la tienda</h4>
+
+
+        <h3>¡Compramos tú móvil! Si querías cambiar de móvil, tienes alguno sin usar o se te ha estropeado algún
+            componente, ¡te puedes deshacer de él y ganar dinero!* - En el caso de que quieras comprarte otro móvil, se
+            te aplicará un descuento equivalente
+            al precio que se negocie en la tienda más un 10%. </h3>
+
+        <h4>- En el caso de móviles con componentes estropeados el vendedor evaluará si es posible comprarlo. </h4>
+        <h5>*se debe negociar el precio en la tienda</h5>
+        <br>
+
     </div>
 
     <div id='employees-information'>
-        <ion-row>
-            <ion-icon src="assets/nabvar-icons/mobile.svg "></ion-icon>
-            <h1>Nuestors empleados</h1>
-        </ion-row>
+
+        <!--  <ng-container *ngIf="employeesArray.length()>0"> -->
+
+        <h1 id="our-employees-text">Nuestors empleados</h1>
+
+        <!-- </ng-container> --> -->
 
 
 

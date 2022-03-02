@@ -1,31 +1,115 @@
-<ion-header>
-    <ion-toolbar>
-        <ion-title>login</ion-title>
+<ion-header class="ion-no-border">
+    <ion-toolbar id="navbar">
+
+        <h2 routerLink="/home" class="navbar-text" id='name-site'>iNoVo</h2>
+
+
+        <div id='bar'>
+            <div class='section' routerLink="/mobiles">
+                <ion-icon class="navbar-icon" src="assets/nabvar-icons/mobile.svg ">
+                </ion-icon>
+                <h2 class="navbar-text">Moviles</h2>
+            </div>
+
+            <div class='section' routerLink="/tablets">
+                <ion-icon class="navbar-icon" src="assets/nabvar-icons/tablet.svg "></ion-icon>
+                <h2 class="navbar-text">Tablets</h2>
+            </div>
+            <div class='section' routerLink="/devices">
+                <ion-icon class="navbar-icon" id='device-icon' src="assets/nabvar-icons/devices.svg "></ion-icon>
+                <h2 class="navbar-text">Accesorios</h2>
+            </div>
+            <div class='section' routerLink="/others">
+                <ion-icon class="navbar-icon" src="assets/nabvar-icons/others.svg "></ion-icon>
+                <h2 class="navbar-text">Otros</h2>
+
+            </div>
+            <ion-searchbar class='search-products' placeholder='Busqueda' [(ngModel)]='searchTerm'
+                showCancelButton='focus' animated></ion-searchbar>
+        </div>
+
+
+        <ion-icon class="navbar-icon-outside" src="assets/nabvar-icons/contact.svg " routerLink="/contact">
+        </ion-icon>
+        <ion-icon class="navbar-icon-outside" src="assets/nabvar-icons/login.svg " routerLink="/login"></ion-icon>
+        <ion-icon class="navbar-icon-outside" id='purchase-icon' src="assets/nabvar-icons/purchase.svg"
+            routerLink="/purchase"></ion-icon>
+
+
     </ion-toolbar>
 </ion-header>
 
 <ion-content>
     <ion-grid class="ion-justify-content-center">
         <ion-row id='login'>
-            <ion-col size='1'></ion-col>
-            <ion-col size='5' id='login-data'>
+            <ion-col size='2'></ion-col>
+            <ion-col size='4' id='login-data'>
+                <form [formGroup]="loginForm" (ngSubmit)="login()" novalidate>
 
-                <h2 id='company-text'>iNoVo</h2>
-                <h1 id='login-text'>Iniciar Sesion</h1>
-                <h1 class="email-password-text ">Email:</h1>
-                <input>
-                <h1 class="email-password-text ">Contraseña:</h1>
-                <input>
+                    <h2 id='company-text'>iNoVo</h2>
+                    <h1 id='login-text'>Iniciar Sesion</h1>
+                    <ion-item id="email-fields">
 
-                <button id="login-button" class="button " type="submit ">Entrar</button>
-                <ion-row>
-                    <h2 id="are-you-not-registered-text">Aun no estas registradoa? </h2>
-                    <h2 id="register-text" routerLink="/register ">Haz click aqui</h2>
-                </ion-row>
+
+                     
+                            <ion-label class="email-password-text" position="floating" for="project_id">Email
+                            </ion-label>
+                            <ion-row>
+                                <ion-input name="email" type="email" placeholder="your@email.com" formControlName="email"
+                                required></ion-input>
+
+                        </ion-row>
+
+
+                        <span slot="error"
+                            *ngIf="loginForm.controls['email'].errors?.required && loginForm.controls['email']?.touched">Rellene
+                            el email</span>
+                        <span slot="error"
+                            *ngIf="loginForm.controls['email'].errors?.pattern && loginForm.controls['email']?.touched">El
+                            email no es válido.</span>
+
+                    </ion-item>
+
+                    <ion-item id="password-fields">
+                        <ion-label class="email-password-text" position="floating" for="project_id">Contraseña
+                        </ion-label>
+                        <ion-row>
+                            
+                            <ion-input name="password" type="password" placeholder="Password" formControlName="password"
+                                required></ion-input>
+
+                        </ion-row>
+                        <span slot="error"
+                            *ngIf="loginForm.controls['password'].errors?.required && loginForm.controls['password']?.touched">Rellene
+                            la contraseña</span>
+                        <span slot="error"
+                            *ngIf="loginForm.controls['password'].errors?.minlength && loginForm.controls['password'].touched">La
+                            contraseña debe de tener más de 6 caracteres.</span>
+                        <span slot="error" *ngIf="loginForm.controls['password'].errors?.maxlength">La contraseña no
+                            puede tener más de 12 caracteres.</span>
+                    </ion-item>
+
+
+
+
+                    <button id="login-button" class="button " type="submit ">Entrar</button>
+
+                    <h3 id="are-you-not-registered-text">¿Aún no estas registrado? <u id="register-text"
+                            routerLink="/register"> Haz click aqui</u> </h3>
+
+
+
+
+                </form>
+
+
+
+
+
             </ion-col>
-            <ion-col size='5' id='login-image'>
-                <ion-col size='1'></ion-col>
-                <ion-img src="assets/nabvar-icons/mobile.svg"></ion-img>
+            <ion-col size='4' id='col-login-image'>
+
+                <ion-img id="login-image" src="assets/others/login-image.svg"></ion-img>
             </ion-col>
 
         </ion-row>

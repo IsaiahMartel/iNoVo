@@ -21,12 +21,26 @@ const routes: Routes = [
   },
   {
     path: 'mobiles',
-    loadChildren: () => import('./views/mobiles/mobiles/mobiles.module').then( m => m.MobilesPageModule)
+    loadChildren: () => import('./views/mobiles/mobiles.module').then( m => m.MobilesPageModule)
+  },
+  {
+    path: 'others',
+    loadChildren: () => import('./views/others/others.module').then( m => m.OthersPageModule)
   },
   {
     path: 'tablets',
-    loadChildren: () => import('./views/tablets/tablets/tablets.module').then( m => m.TabletsPageModule)
+    loadChildren: () => import('./views/tablets/tablets.module').then( m => m.TabletsPageModule)
   },
+  {
+    path: 'devices',
+    loadChildren: () => import('./views/devices/devices.module').then( m => m.DevicesPageModule)
+  },  {
+    path: 'register',
+    loadChildren: () => import('./views/register/register.module').then( m => m.RegisterPageModule)
+  },
+
+
+
 ];
 
 @NgModule({

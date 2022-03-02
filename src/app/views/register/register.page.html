@@ -1,0 +1,44 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar id="navbar">
+
+      <h2  routerLink="/home" class="navbar-text" id='name-site'>iNoVo</h2>
+
+
+      <div id='bar'>
+          <div class='section' routerLink="/mobiles">
+              <ion-icon class="navbar-icon" src="assets/nabvar-icons/mobile.svg ">
+              </ion-icon>
+              <h2 class="navbar-text">Moviles</h2>
+          </div>
+
+          <div class='section' routerLink="/tablets">
+              <ion-icon class="navbar-icon" src="assets/nabvar-icons/tablet.svg "></ion-icon>
+              <h2 class="navbar-text">Tablets</h2>
+          </div>
+          <div class='section' routerLink="/devices">
+              <ion-icon class="navbar-icon" id='device-icon' src="assets/nabvar-icons/devices.svg "></ion-icon>
+              <h2 class="navbar-text">Accesorios</h2>
+          </div>
+          <div class='section' routerLink="/others">
+              <ion-icon class="navbar-icon" src="assets/nabvar-icons/others.svg "></ion-icon>
+              <h2 class="navbar-text">Otros</h2>
+
+          </div>
+          <ion-searchbar class='search-products' placeholder='Busqueda' [(ngModel)]='searchTerm'
+              showCancelButton='focus' animated></ion-searchbar>
+      </div>
+
+
+      <ion-icon class="navbar-icon-outside" src="assets/nabvar-icons/contact.svg " routerLink="/contact">
+      </ion-icon>
+      <ion-icon class="navbar-icon-outside" src="assets/nabvar-icons/login.svg " routerLink="/login"></ion-icon>
+      <ion-icon class="navbar-icon-outside" id='purchase-icon' src="assets/nabvar-icons/purchase.svg"
+          routerLink="/purchase"></ion-icon>
+
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<app-register-with-validations></app-register-with-validations>
+</ion-content>

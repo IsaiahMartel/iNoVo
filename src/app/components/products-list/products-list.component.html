@@ -1,0 +1,24 @@
+<ion-row>
+<ng-container *ngFor="let product of productArray" >
+  <ng-container *ngIf="product.type==type">
+ 
+  
+
+  <ion-card id='products'>
+      <ion-card-header>
+          <img src="assets/products/mobiles/iphone13.svg" alt="product" class="products">
+          <h4> {{product.brand}} {{product.model}} de {{product.storage}}</h4>
+          <hr id='separator'>
+          <h4>{{product.price}}</h4>
+
+
+      </ion-card-header>
+  
+
+  </ion-card>
+
+
+
+</ng-container>
+</ng-container>
+</ion-row>

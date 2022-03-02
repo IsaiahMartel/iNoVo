@@ -1,4 +1,98 @@
 @import url('https://fonts.googleapis.com/css2?family=Spline+Sans&display=swap');
+ion-content {
+    --offset-bottom: auto!important;
+    --overflow: hidden;
+    overflow: auto;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    border-color: rgb(110,
+    102,
+    102);
+    border-style: solid;
+    border-width: 0px 1px 1px 1px;
+    
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(219, 243, 252, 1) 100%);
+}
+
+ion-header {
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+ion-toolbar {
+    margin-top: 1.5%;
+    vertical-align: middle;
+}
+
+.navbar-icon {
+    font-size: 1.1em;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 7px;
+    margin-top: 5px;
+}
+
+.navbar-icon-outside {
+    font-size: 1.7em;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+
+#purchase-icon {
+    font-size: 1.8em;
+}
+
+#device-icon {
+    margin-right: 0px;
+    font-size: 2em;
+}
+
+.navbar-text {
+    font-size: 1.6em;
+    display: inline-block;
+    vertical-align: middle;
+    font-family: 'Spline Sans', sans-serif;
+}
+
+.navbar-categories {
+    border-right: 1px solid black;
+    display: inline-block;
+}
+
+#bar {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 40px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    margin-left: 3%;
+    margin-right: 3%;
+    background-color: #F5F5F5;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.section {
+    border-right: 1px solid black;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+ion-searchbar {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 30%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
 #contact {
     text-align: center;
     font-family: 'Spline Sans', sans-serif;
@@ -6,16 +100,33 @@
 }
 
 #separator {
-    background-color: rgba(97, 96, 96, 0.781);
-    width: 50%;
+    box-shadow: 0px 0px 0px 1px rgb(189, 186, 186);
+
+    width: 30%;
     height: 2px;
     margin-top: 2%;
     margin-bottom: 2%;
 }
 
 #information {
-    margin-left: 6%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
+
+
+    #monthly-offers-icon {
+        display: inline-block;
+        font-size: 35px;
+        color: #ffC977;
+        vertical-align: middle;
+       }
+       
+      #monthly-offers-text{
+         display: inline-block;
+         vertical-align: middle;
+         margin-left: 2.5%;
+       }
+
 
 #separator-littler {
     background-color: rgba(128, 128, 128, 0.822);
@@ -23,4 +134,69 @@
     height: 2px;
     margin-top: 2%;
     margin-bottom: 2%;
+}
+
+#money-mobile-img{
+    float: right;
+    
+
+  width: 20%;
+}
+
+
+#employees-information{
+    margin-top: 5%;
+}
+
+#our-employees-text{
+    text-align: center;
+}
+
+#employee-image{ float: left;
+    width: 20%;}
+
+    #square {
+        // margin-top: 15px;
+        // margin-left: 15px;
+        // margin-right: 15px;
+        border-width: 1px;
+        box-shadow: 0px 0px 0px 1px rgb(189, 186, 186);
+       
+        background-color: white;
+        padding: 10px;
+        padding-bottom: 30px;
+    text-align: center !important;
+
+      margin-left: 30%;
+      margin-right: 30%;
+    }
+
+
+.fields{
+    margin-bottom: 20px;
+}
+
+#fill-text{
+    margin-top: 5%;
+}
+
+#contact-button {
+    width: 50%;
+    height: 60px;
+    font-size: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    display: block;
+
+    font-family: 'Outfit', sans-serif;
+    background-color: #ffffff;
+    box-shadow: 0 0 1px black;
+    margin-bottom: 10ppx;
+}
+
+#separator-form {
+    background-color: rgba(128, 128, 128, 0.39);
+    width: 70%;
+    height: 2px;
 }

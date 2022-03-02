@@ -7,6 +7,9 @@ import {Ng2SearchPipeModule} from 'ng2-search-filter';
 // import { AutomaticThreeSliderComponent } from 'src/app/components/automatic-three-slider/automatic-three-slider/automatic-three-slider.component';
 
 import { HomePageRoutingModule } from './home-routing.module';
+import { ProductsListComponent } from 'src/app/components/products-list/products-list.component';
+import { SearchForProductComponent } from 'src/app/components/search-for-product/search-for-product.component';
+import { PipesModule } from 'src/app/pipes/pipes.module';
 
 
 @NgModule({
@@ -16,8 +19,12 @@ import { HomePageRoutingModule } from './home-routing.module';
     IonicModule,
     HomePageRoutingModule, 
     Ng2SearchPipeModule,
-    // AutomaticThreeSliderComponent
+    // AutomaticThreeSliderComponent,
+    PipesModule
+
   ],
-  declarations: [HomePage]
+  declarations: [HomePage, SearchForProductComponent],
+  providers: [SearchForProductComponent]
+
 })
 export class HomePageModule {}

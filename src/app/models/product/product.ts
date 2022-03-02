@@ -1,4 +1,5 @@
 export class Product {
+    type : String;
     brand: string;
     model: string;
     price: number;
